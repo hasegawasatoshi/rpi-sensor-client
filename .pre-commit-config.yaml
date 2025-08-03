@@ -1,0 +1,17 @@
+repos:
+  - repo: https://github.com/astral-sh/uv-pre-commit
+    # uv version.
+    rev: 0.8.4
+    hooks:
+      - id: uv-lock
+  - repo: https://github.com/astral-sh/uv-pre-commit
+    # uv version.
+    rev: 0.8.4
+    hooks:
+      - id: uv-export
+  - repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: v0.12.7
+    hooks:
+      - id: ruff
+        args: [--fix, --extend-select, I]  # Automatically fixes issues found by ruff
+      - id: ruff-format
