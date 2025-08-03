@@ -4,7 +4,12 @@ version = "0.1.0"
 description = "Sensor client for Raspberry Pi"
 readme = "README.md"
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "adafruit-circuitpython-scd4x>=1.4.8",
+    "pyyaml>=6.0.2",
+    "redis>=6.2.0",
+    "rpi-gpio>=0.7.1",
+]
 
 [dependency-groups]
 dev = [

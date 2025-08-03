@@ -1,0 +1,8 @@
+redis:
+  host: localhost
+  port: 6379
+  db: 0
+  expire: 10
+scd4x:
+  monitoring:
+    intervals:  3
