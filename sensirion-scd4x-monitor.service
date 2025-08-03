@@ -1,0 +1,23 @@
+[Unit]
+Description=Sensirion SCD4x monitoring
+Requires=redis.service
+After=redis.service
+
+[Service]
+User=root
+Type=simple
+
+Environment="PATH=/opt/ambient/.venv/bin/"
+
+WorkingDirectory=/opt/ambient
+ExecStart=/opt/ambient/.venv/bin/python sensirion-scd4x-monitor.py -c config.yaml
+
+TimeoutStartSec=0
+Restart=on-failure
+RestartSec=10
+
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
