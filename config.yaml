@@ -6,3 +6,6 @@ redis:
 scd4x:
   monitoring:
     intervals:  3
+display:
+  font: /usr/share/fonts/opentype/ipafont-gothic/ipagp.ttf
+  
