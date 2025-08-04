@@ -1,0 +1,17 @@
+[Unit]
+Description=E-ink paper display service
+Requires=redis.service
+After=redis.service
+
+[Service]
+User=root
+Type=simple
+
+WorkingDirectory=/opt/ambient
+ExecStart=/opt/ambient/.venv/bin/python waveshare-epd2in66b-display.py -c config.yaml
+
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
